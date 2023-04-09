@@ -1,7 +1,6 @@
 # J站後台管理系統
-## 建立首頁-index.php
-![RUNOOB 图标](https://drive.google.com/drive/folders/12T_cyckiPd-YC19uhOR7VWAX2nH4R52G?usp=sharing)
-* 共有2支PHP，以下為 index.php，其中有include sidebar.php
+## 建立空白首頁-index.php
+* 先將頁面建立起來，共有2支PHP，以下為 index.php，其中有include sidebar.php做為邊欄選單
 ```
   <!DOCTYPE html>
   <html lang="en">
@@ -112,4 +111,69 @@
             </div>
         </div>
       </div>
+```
+## 使用CARD建立儀表板，顯示顧客、員工、分公司.....總數
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+        <!-- 這裡include sidebar.php -->
+        <?php include "sidebar.php" ?>
+        <!-- 結束include sidebar.php -->
+        <div class="col py-3">
+            網頁內容放這裡
+            <!-- 以下放 card -->
+            <div class="row">
+                <!-- J站顧客卡 -->
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">J站顧客</h5>
+                            <p class="card-text">顧客總數
+                                <?php
+                                    $servername = "localhost";
+                                    $username = "root";
+                                    $password = "";
+                                    $dbname = "classicmodels";
+                        
+                                    // 建立連線
+                                    $conn = new mysqli($servername, $username, $password, $dbname);
+                                    // 檢查連線
+                                    if ($conn->connect_error) {
+                                    die("<p>連線失敗" . date("Y-m-d H;i:s") . "</p>" . $conn->connect_error);
+                                    }
+                                    $sql = "select count(*) as totalcustomers from customers;";
+                                    $result = $conn->query($sql);
+                                    if ($result->num_rows > 0) {
+                                        while($row = $result->fetch_assoc()) {
+                                          echo $row["totalcustomers"] . "<br>查詢時間：" . date("Y-m-d H;i:s");
+                                        }
+                                      } else {
+                                        echo "unknown ERROR!";
+                                      }
+                                    // 結束連線
+                                    $conn->close();
+                                    // echo "<p>結束連線" . date("Y-m-d H;i:s") . "<p>";
+                                ?>
+                            </p>
+                            <a href="#" class="btn btn-primary">前往顧客管理</a>
+                        </div>
+                    </div>
+                </div>
+                <! 以下三個 /div 要放到 include 我的程式裡>
+        </div>
+    </div>
+</div>
+</body>
+</html>
 ```
