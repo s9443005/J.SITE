@@ -47,6 +47,18 @@
                         <div class="card-body">
                             <h5 class="card-title"><i class="fs-2 bi-box-seam px-3 text-info"></i></i>產品</h5>
                             <?php
+                            $sql = "SELECT count(*) as hotproducts FROM orderdetails group by productCode order by productCode;";
+                            $result = $conn->query($sql);
+                            $row    = $result->fetch_assoc();
+                            echo "<p class='card-text'>J站第1名熱銷商品：" . $row['hotproducts'] . "</p>";
+                            ?>
+                            <a href="productsAll.php" class="btn btn-primary">更多...</a>
+                        </div>
+                    </div>
+                    <div class="card m-3 p-3 shadow round-3" style="width: 18rem; background-image: linear-gradient(#ffffff, #ffffff, #88ffff)">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fs-2 bi-box-seam px-3 text-info"></i></i>產品</h5>
+                            <?php
                             $sql = "SELECT count(*) as totalproducts FROM products";
                             $result = $conn->query($sql);
                             $row    = $result->fetch_assoc();

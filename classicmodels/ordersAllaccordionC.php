@@ -35,6 +35,7 @@
                             echo '</h2>';
                             echo '<div id="flush-collapse' . $i . '" class="accordion-collapse collapse" aria-labelledby="flush-heading' . $i . '" data-bs-parent="#accordionFlushExample">';
                             echo '<div class="accordion-body">';
+                            echo "<h5>訂單基本資料</h5><hr>";
                             echo '<table class="table table-hover">'; /* 手風琴BODY表格-BEGIN */
                             echo "<tr>";
                             echo "<th class='bg-primary text-white'>訂單編號</th>";
@@ -66,6 +67,7 @@
                             }
                             $sql2 = "select orderNumber, orderdetails.productCode, productName, quantityOrdered, priceEach, quantityOrdered*priceEach as subtotal from products, orderdetails where orderNumber = '" . $row['orderNumber'] . "' and products.productCode=orderdetails.productCode; ";
                             //echo $sql2;
+                            echo "<h5>訂單明細</h5><hr>";
                             $result2 = $conn2->query($sql2);
                             if ($result2->num_rows > 0) {
                                 echo "<table class='table table hover'>";
