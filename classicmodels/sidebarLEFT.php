@@ -48,7 +48,7 @@
                         <a href="ordersAllaccordionB.php" class="nav-link px-0"> <span class="d-none d-sm-inline">訂單手風琴總覽B</span>3</a>
                     </li>
                     <li class="w-100">
-                        <a href="ordersAllaccordionC.php" class="nav-link px-0"> <span class="d-none d-sm-inline">訂單手風琴總覽C</span>3</a>
+                        <a href="ordersAllaccordionC.php" class="nav-link px-0"> <span class="d-none d-sm-inline">訂單手風琴總覽C</span>4</a>
                     </li>
                 </ul>
             </li>
@@ -83,19 +83,19 @@
                 <a href="#submenu6" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
                     <i class="fs-2 bi-person-vcard"></i> <span class="ms-1 d-none d-sm-inline">員工管理系統</span> </a>
                 <ul class="collapse nav flex-column ms-1" id="submenu6" data-bs-parent="#menu">
-                <li class="w-100">
+                    <li class="w-100">
                         <a href="employeesAll.php" class="nav-link px-0"> <span class="d-none d-sm-inline">員工表格總覽</span> 1</a>
-                </li>
-                <li class="w-100">
+                    </li>
+                    <li class="w-100">
                         <a href="employeesTitleView.php" class="nav-link px-0"> <span class="d-none d-sm-inline">職稱手風琴總覽</span> 1</a>
-                </li>
+                    </li>
                 </ul>
             </li>
             <li>
                 <a href="#submenu7" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
                     <i class="fs-2 bi-send-fill"></i> <span class="ms-1 d-none d-sm-inline">教學實驗連結</span> </a>
                 <ul class="collapse nav flex-column ms-1" id="submenu7" data-bs-parent="#menu">
-                <li class="w-100">
+                    <li class="w-100">
                         <a href="customersAllTextTeach.php" class="nav-link px-0"> <span class="d-none d-sm-inline">顧客總覽表格前教學</span>1</a>
                     </li>
                     <li class="w-100">
@@ -121,7 +121,7 @@
                     </li>
                 </ul>
             </li>
-         </ul>
+        </ul>
         <hr>
         <div class="dropdown pb-4">
             <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
