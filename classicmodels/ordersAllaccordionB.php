@@ -42,7 +42,7 @@
                     echo "<th class='bg-primary text-white'>出貨日期</th>";
                     echo "<th class='bg-primary text-white'>狀態</th>";
                     echo "<th class='bg-primary text-white'>附註</th>";
-                    echo "<th class='bg-primary text-white'>顧客編號</th>";
+                    echo "<th class='bg-primary text-white'>顧客編號(FK)</th>";
                     echo "</tr>";
                     echo "<tr>";
                     echo "<td>" . $row['orderNumber'] . "</td>";

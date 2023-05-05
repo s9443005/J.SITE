@@ -1,7 +1,9 @@
 <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
     <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
         <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-            <span class="px-2 fs-1 fst-italic fw-bold text-warning">J.site</span><span class="fs-5 d-none d-sm-inline">管理資訊系統</span>
+            <div class='align-bottome'>
+                <span class="px-2 fs-1 fst-italic fw-bold text-warning">J.site</span><span class="fs-5 d-none d-sm-inline">管理資訊系統</span>
+            </div>
         </a>
         <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
             <li class="nav-item">
@@ -93,7 +95,7 @@
             </li>
             <li>
                 <a href="#submenu7" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                    <i class="fs-2 bi-send-fill"></i> <span class="ms-1 d-none d-sm-inline">教學實驗連結</span> </a>
+                    <i class="fs-2 bi-send-fill"></i> <span class="ms-1 d-none d-sm-inline">教學筆記</span> </a>
                 <ul class="collapse nav flex-column ms-1" id="submenu7" data-bs-parent="#menu">
                     <li class="w-100">
                         <a href="customersAllTextTeach.php" class="nav-link px-0"> <span class="d-none d-sm-inline">顧客總覽表格前教學</span>1</a>
@@ -103,6 +105,9 @@
                     </li>
                     <li class="w-100">
                         <a href="formPassingParameters.html" class="nav-link px-0"> <span class="d-none d-sm-inline">表單POST/GET到PHP教學</span>1</a>
+                    </li>
+                    <li class="w-100">
+                        <a href="viewForComplexSQL.php" class="nav-link px-0"> <span class="d-none d-sm-inline">用VIEW解複雜SQL</span></a>
                     </li>
                     <li class="w-100">
                         <a href="classicmodelsERD.php" class="nav-link px-0"> <span class="d-none d-sm-inline">經典資料庫ERD</span>1</a>

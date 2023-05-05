@@ -44,7 +44,7 @@
                             echo "<th class='bg-primary text-white'>出貨日期</th>";
                             echo "<th class='bg-primary text-white'>狀態</th>";
                             echo "<th class='bg-primary text-white'>附註</th>";
-                            echo "<th class='bg-danger text-white'>顧客姓名</th>";
+                            echo "<th class='bg-danger text-white'>顧客姓名(FK)</th>";
                             echo "<th class='bg-danger text-white'>聯絡人</th>";
                             echo "</tr>";
                             echo "<tr>";
@@ -73,10 +73,10 @@
                                 echo "<table class='table table hover'>";
                                 echo "<tr>";
                                 echo "<th class='bg-primary text-white'>產品編號</th>";
-                                echo "<th class='bg-danger text-white'>產品名稱</th>";
+                                echo "<th class='bg-danger text-white'>產品名稱(FK)</th>";
                                 echo "<th class='bg-primary text-white'>訂購數量</th>";
                                 echo "<th class='bg-primary text-white'>產品單價</th>";
-                                echo "<th class='bg-warning text-white'>合計</th>";
+                                echo "<th class='bg-warning text-white'>合計*</th>";
                                 echo "</tr>";
                                 while ($row = $result2->fetch_assoc()) {
                                     echo "<tr>";
