@@ -1,0 +1,15 @@
+找出每個商品碼、每個商品名稱、每個商品銷售數目、每個商品銷貨收入
+drop view if exists totalProductOrder;
+
+create view if not exists totalProductOrder as
+select orderdetails.productCode, productName, sum(quantityOrdered) as quantityPerProduct,
+sum(quantityOrdered*priceEach) as salePerProduct
+from orderdetails, products
+where orderdetails.productCode=products.productCode
+group by productCode ;
+
+找出賣出累積數量最多的商品碼、商品名稱、總計銷售數目
+select productCode, productName, max(quantityPerProduct) as MaxQuantityProduct from totalProductOrder;
+
+找出賣出累積金額最大的商品碼、商品名稱、總計銷售金額
+select productCode, productName, max(salePerProduct ) as MaxSaleProduct from totalProductOrder;
