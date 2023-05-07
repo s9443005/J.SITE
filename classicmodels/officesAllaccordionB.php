@@ -29,7 +29,7 @@
                     echo "<div class='accordion-item m-1'><!-- 手風琴項目BEGIN -->";
                     echo "<h2 class='accordion-header' id='heading" .$i. "'>";
                     echo "<button class='accordion-button collapsed' type='button' data-bs-toggle='collapse' data-bs-target='#collapse" . $i . "'  aria-expanded='true' aria-controls='collapse" . $i . "'>";
-                    echo "第" . $row['officeCode'] . "號分公司" . $row['city'];
+                    echo "第" . $row['officeCode'] . "號分公司<div class='ms-5'>" . $row['city'] . "</div>";
                     echo "</button>";
                     echo "</h2>";
                     echo "<div id='collapse" . $i . "' class='accordion-collapse collapse' aria-labelledby='heading" . $i . "' data-bs-parent='#accordionExample'>";

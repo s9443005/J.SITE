@@ -1,6 +1,6 @@
 <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
     <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-        <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+        <a href="#s" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
             <div class='align-bottome'>
                 <span class="px-2 fs-1 fst-italic fw-bold text-warning">J.site</span><span class="fs-5 d-none d-sm-inline">管理資訊系統</span>
             </div>
@@ -68,7 +68,10 @@
                     <i class="fs-2 bi-house-door-fill"></i> <span class="ms-1 d-none d-sm-inline">分公司管理系統</span> </a>
                 <ul class="collapse nav flex-column ms-1" id="submenu5" data-bs-parent="#menu">
                     <li class="w-100">
-                        <a href="officesAll.php" class="nav-link px-0"> <span class="d-none d-sm-inline">分公司表格總覽</span>1</a>
+                        <a href="officesTextAll.php" class="nav-link px-0"> <span class="d-none d-sm-inline">分公司文字總覽</span>1</a>
+                    </li>
+                    <li class="w-100">
+                        <a href="officesAll.php" class="nav-link px-0"> <span class="d-none d-sm-inline">分公司表格總覽</span>2</a>
                     </li>
                     <li class="w-100">
                         <a href="officesAllaccordionA.php" class="nav-link px-0"> <span class="d-none d-sm-inline">分公司手風琴總覽A</span>2</a>
@@ -78,6 +81,15 @@
                     </li>
                     <li class="w-100">
                         <a href="officesAllaccordionC.php" class="nav-link px-0"> <span class="d-none d-sm-inline">分公司手風琴總覽C</span>4</a>
+                    </li>
+                    <li class="w-100">
+                        <a href="officesAllaccordionD.php" class="nav-link px-0"> <span class="d-none d-sm-inline">分公司手風琴總覽D</span>5</a>
+                    </li>
+                    <li class="w-100">
+                        <a href="officesQueryHTML.html" class="nav-link px-0"> <span class="d-none d-sm-inline">分公司HTML查詢</span>1</a>
+                    </li>
+                    <li class="w-100">
+                        <a href="officesQueryA.php" class="nav-link px-0"> <span class="d-none d-sm-inline">分公司查詢</span>2</a>
                     </li>
                 </ul>
             </li>

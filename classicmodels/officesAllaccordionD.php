@@ -29,7 +29,7 @@
                     echo "<div class='accordion-item m-1'><!-- 手風琴項目BEGIN -->";
                     echo "<h2 class='accordion-header' id='heading" .$i. "'>";
                     echo "<button class='accordion-button collapsed' type='button' data-bs-toggle='collapse' data-bs-target='#collapse" . $i . "'  aria-expanded='true' aria-controls='collapse" . $i . "'>";
-                    echo "第" . $row['officeCode'] . "號分公司<div class='ms-5'>" . $row['city'];
+                    echo "第" . $row['officeCode'] . "號分公司<div class='ms-5'>" . $row['city'] ."</div>";
                     echo "</button>";
                     echo "</h2>";
                     echo "<div id='collapse" . $i . "' class='accordion-collapse collapse' aria-labelledby='heading" . $i . "' data-bs-parent='#accordionExample'>";
@@ -58,45 +58,51 @@
                     echo "<td>".$row['territory']."</td>";
                     echo "</tr>";
                     echo "</table>";
-
-                    /* 以下新增1個connection來存取本分公司員工姓名*/
-                    $conn2 = new mysqli($servername, $username, $password, $dbname);
-                    if ($conn2->connect_error) {
-                        die("Connection failed: " . $conn2->connect_error);
-                    }
-                    $sql2 = "SELECT * FROM employees where officeCode='".$row['officeCode']."';";
-                    //echo $sql2;
-                    $result2 = $conn2->query($sql2);
-                    echo "<h5>分公司員工數：" . $result2->num_rows . "</h5>";
-                    echo "<div class='col-md-6'><table class='table table-hover'>";
-                    if ($result->num_rows > 0) {
-                        echo "<tr>";
-                        echo "<th class='bg-primary text-white'>員工編號</th>";
-                        echo "<th class='bg-primary text-white'>員工姓名</th>";
-                        echo "<th class='bg-primary text-white'>員工職稱</th>";
-                        echo "<tr>";
-                        while($row2 = $result2->fetch_assoc()) {
-                            echo "<tr>";
-                            echo "<td><a href='#'>".$row2['employeeNumber']."</a></td>";
-                            echo "<td>".$row2['firstName']." ".$row2['lastName']."</td>";
-                            echo "<td>".$row2['jobTitle']."</td>";
-                            echo "</tr>";
+                    ?>
+                    <p>
+                        <button class="btn btn-info text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                            所屬員工
+                        </button>
+                    </p>
+                    <?php
+                        echo '<div class="collapse col-md-6" id="collapseExample">';
+                        echo '<div class="card card-body">';
+                        /* 以下新增1個connection來存取本分公司員工姓名*/
+                        $conn2 = new mysqli($servername, $username, $password, $dbname);
+                        if ($conn2->connect_error) {
+                            die("Connection failed: " . $conn2->connect_error);
                         }
-                        echo "</table></div>";
-                    }
-                    $conn2->close();
-                    /* 以上新增1個connection來存取本分公司員工姓名*/
-                    echo "</div>";
-                    echo "</div>";
+                        $sql2 = "SELECT * FROM employees where officeCode='".$row['officeCode']."';";
+                        //echo $sql2;
+                        $result2 = $conn2->query($sql2);
+                        //echo "<h5>分公司員工數：" . $result2->num_rows . "</h5>";
+                        echo "<div><table class='table table-hover'>";
+                        if ($result->num_rows > 0) {
+                            echo "<tr>";
+                            echo "<th class='bg-primary text-white'>員工編號</th>";
+                            echo "<th class='bg-primary text-white'>員工姓名</th>";
+                            echo "<th class='bg-primary text-white'>員工職稱</th>";
+                            echo "<tr>";
+                            while($row2 = $result2->fetch_assoc()) {
+                                echo "<tr>";
+                                echo "<td><a href='#'>".$row2['employeeNumber']."</a></td>";
+                                echo "<td>".$row2['firstName']." ".$row2['lastName']."</td>";
+                                echo "<td>".$row2['jobTitle']."</td>";
+                                echo "</tr>";
+                            }
+                            echo "</table></div>";
+                        }
+                        echo "</div>";
+                        echo "</div>";
+                        $conn2->close();
+                        /* 以上新增1個connection來存取本分公司員工姓名*/
+                        echo "</div>";
+                        echo "</div>";
                     echo "</div><!-- 手風琴項目END -->";
                 }
             }
             ?>
 
-            <?php
-
-
-            ?>
             <?php include "disconnectDB.php"; ?>
             </div><!-- 手風琴END -->
             </div><!-- 邊欄右END -->
