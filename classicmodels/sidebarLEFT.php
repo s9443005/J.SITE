@@ -89,7 +89,10 @@
                         <a href="officesQueryHTML.html" class="nav-link px-0"> <span class="d-none d-sm-inline">分公司HTML查詢</span>1</a>
                     </li>
                     <li class="w-100">
-                        <a href="officesQueryA.php" class="nav-link px-0"> <span class="d-none d-sm-inline">分公司查詢</span>2</a>
+                        <a href="officesQueryShowTextA.php" class="nav-link px-0"> <span class="d-none d-sm-inline">分公司查詢-文字</span>2</a>
+                    </li>
+                    <li class="w-100">
+                        <a href="officesQueryShowAccordionB.php" class="nav-link px-0"> <span class="d-none d-sm-inline">分公司查詢-手風琴</span>3</a>
                     </li>
                 </ul>
             </li>
