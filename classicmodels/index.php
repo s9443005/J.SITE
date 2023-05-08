@@ -120,6 +120,8 @@
                             $row    = $result->fetch_assoc();
                             echo "<p class='card-text'>J站最熱銷商品：" . $row['productName'] . "</p>";
                             echo "<p class='card-text'>己賣出：" . $row['maxQuantityOrdered'] . "</p>";
+                            $sql = "drop view if exists saleProductQuantity;";
+                            $result = $conn->query($sql); /* 用完刪除 */
                             ?>
                             <a href="#" class="btn btn-primary">更多...</a>
                         </div>
@@ -141,6 +143,8 @@
                             $row    = $result->fetch_assoc();
                             echo "<p class='card-text'>J站最收益商品：" . $row['productName'] . "</p>";
                             echo "<p class='card-text'>收入：\$" . $row['maxProductAvenues'] . "</p>";
+                            $sql = "drop view if exists saleProductAvenues;";
+                            $result = $conn->query($sql); /* 用完刪除 */ 
                             ?>
                             <a href="#" class="btn btn-primary">更多...</a>
                         </div>
@@ -163,6 +167,8 @@
                             echo "<p class='card-text'>J站最給力顧客編號：" . $row['customerNumber'] . "</p>";
                             echo "<p class='card-text'>姓名：" . $row['customerName'] . "</p>";
                             echo "<p class='card-text'>己成交：" . $row['maxOrdersCount'] . "單</p>";
+                            $sql = "drop view if exists customerOrderCount;";
+                            $result = $conn->query($sql); /* 用完刪除 */
                             ?>
                             <a href="#" class="btn btn-primary">更多...</a>
                         </div>
