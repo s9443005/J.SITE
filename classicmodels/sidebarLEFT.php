@@ -100,7 +100,7 @@
                         <a href="officesQueryShowAccordionB.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">分公司查詢-手風琴</span>3</a>
                     </li>
                     <li class="w-100">
-                        <a href="officesQueryBySelection.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">分公司下拉查詢</span>3</a>
+                        <a href="officesQueryBySelect.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">分公司下拉查詢</span>3</a>
                     </li>
                 </ul>
             </li>
@@ -121,6 +121,9 @@
                     <i class="fs-2 bi-send-fill"></i> <span class="ms-1 d-none d-sm-inline">教學筆記</span> </a>
                 <ul class="collapse nav flex-column ms-1" id="submenu8" data-bs-parent="#menu">
                     <li class="w-100">
+                        <a href="classicmodelsERD.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">經典資料庫ERD</span>1</a>
+                    </li>
+                    <li class="w-100">
                         <a href="customersAllTextTeach.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">顧客總覽表格前教學</span>1</a>
                     </li>
                     <li class="w-100">
@@ -136,7 +139,10 @@
                         <a href="ordersDateAdd18YearNote.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">將Order日期加18年</span></a>
                     </li>
                     <li class="w-100">
-                        <a href="classicmodelsERD.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">經典資料庫ERD</span>1</a>
+                        <a href="chartByCanvasJS.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">用CanvasJS畫統計圖</span></a>
+                    </li>
+                    <li class="w-100">
+                        <a href="chartByCDNJS.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">用CDNJS畫統計圖</span></a>
                     </li>
                 </ul>
             </li>

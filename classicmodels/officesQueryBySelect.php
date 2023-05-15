@@ -14,20 +14,24 @@
             <!-- 邊欄右BEGIN -->
             <div class="col py-3">
                 <h1>分公司編號查詢</h1>
-                <form id='officeCode' method="post" action="officesQueryShowAccordionB.php" class='m-5'>
-                    <label>選擇分公司</label>
-                    <select name="officeCode" id="officeCode" form="officeCode">
-                    <?php include "connectDB.php"; ?>
-                        $sql = "select * from offices;"
+                    <form method="POST" action="officesQueryBySelect.php" id="officeCodeForm" class="m-5">
+                    <div class="mb-3 col-2">
+                    <label for="offices" class="form-label">請選擇分公司</label>
+                    <select class="form-select" id="officeCode" name="officeCode" size="1">
+                        <?php include "connectDB.php"; ?>
+                        <?php
+                        $sql = "select * from offices;";
                         $result = $conn->query($sql);
-                        if ($result->num_rows > 0){
-                            while ($row=$result->fetch_assoc()){
-                                
+                        if ($result->num_rows > 0 ){
+                            while ($row= $result->fetch_assoc()) {
+                                echo '<option value="'  .$row['officeCode']. '">' .$row['officeCode'].'---'.$row['city'].'</option>';
                             }
                         }
-                    ?>
-                    <input type="submit" value="查詢">
-                </form>
+                        ?>
+                        </select>
+                        <button type="submit" class="btn btn-primary text-white">提交查詢</button>
+                    </div>
+                    </form>
                 <hr>
                 <?php
                 if (!($_SERVER["REQUEST_METHOD"] == "POST")) { die("沒有POST"); }

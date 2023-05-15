@@ -3,6 +3,17 @@
 
 <head>
     <?php include "htmlhead.php"; ?>
+    <style>
+    * {
+  margin: 0;
+  padding: 0;
+}
+#chart-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+  </style>
 </head>
 
 <body>
@@ -19,7 +30,10 @@
                 <hr>
                 <div class="row">
                     <?php include "indexCardBlue.php"; ?>
+                    <?php include "indexCardYellow.php"; ?>
                     <?php include "indexCardMagenta.php"; ?>
+                    <?php include "indexCardGold.php"; ?>
+                    <?php include "indexCardCharts.php"; ?>
                 </div>
                 <?php include "disconnectDB.php"; ?>
             </div>

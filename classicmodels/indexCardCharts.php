@@ -1,16 +1,50 @@
 <div class="row">
+    <!--J站顧客人數高斯圖BEGIN-->
     <div class="card m-3 p-3 shadow round-3" style="width: 18rem; background-image: linear-gradient(#ffffff, #ffffff, #88ffff)">
         <div class="card-body">
             <h5 class="card-title"><i class="fs-2 bi-people px-3 text-info"></i>顧客</h5>
             <?php
             $sql = "SELECT count(*) as totalCustomers FROM customers";
             $result = $conn->query($sql);
-            $row    = $result->fetch_assoc();
-            echo "<p class='card-text'>J站顧客數：" . $row['totalCustomers'] . "位</p>";
+            unset($customer);
+            $row        = $result->fetch_assoc();
+            $totalCustomer[] = $row['totalCustomers'];
+            //echo "<p class='card-text'>J站顧客數：" . $row['totalCustomers'] . "位</p>";
             ?>
+            <div id="guage-customerTotal" style="height: 18rem"></div>
             <a href="customersAll.php" class="btn btn-primary">更多...</a>
         </div>
-    </div>
+        <!--ECHART--><script type="text/javascript">
+            var dom = document.getElementById('guage-customerTotal');
+            var myChart = echarts.init(dom, null, { renderer: 'canvas',
+                                                    useDirtyRect: false });
+            var app = {};
+            var option;
+            option  =   {title: {   text: 'J站顧客數'},
+                         series:[{  type: 'gauge',
+                                    min:        0,
+                                    max:        150,
+                                    startAngle: 210,
+                                    endAngle:   -30,
+                                    progress:   { show: true,   width: 6    },
+                                    axisLine:   { lineStyle:    {width: 6}  },
+                                    axisTick:   { show: false               },
+                                    splitLine:  { length: 0,    lineStyle: {width: 1,   color: '#999'}  },
+                                    axisLabel:  { distance: 0,  color: '#999',  fontSize: 12            },
+                                    anchor:     {show: true,    showAbove: true,    size: 8,
+                                                 itemStyle: {borderWidth: 2}},
+                                    title:      {show: true,                },
+                                    detail:     {valueAnimation: true, fontSize: 16, formatter:'{value}位',
+                                                 offsetCenter: [0, '30%']   },
+                                    data: [{value: <?php echo json_encode($totalCustomer, JSON_NUMERIC_CHECK)?>}]
+                                }]
+                        };
+            if (option && typeof option === 'object') { myChart.setOption(option);  }
+            window.addEventListener('resize', myChart.resize);
+        </script>
+    </div><!--J站顧客人數高斯圖END-->
+
+
     <div class="card m-3 p-3 shadow round-3" style="width: 18rem; background-image: linear-gradient(#ffffff, #ffffff, #88ffff)">
         <div class="card-body">
             <h5 class="card-title"><i class="fs-2 bi-boxes px-3 text-info"></i></i>產品線</h5>

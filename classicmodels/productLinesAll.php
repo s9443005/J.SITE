@@ -34,7 +34,7 @@
                     echo "<td>" . $row['productLine'] . "</td>";
                     echo "<td>" . $row['textDescription'] . "</td>";
                     echo "<td>" . $row['htmlDescription'] . "</td>";
-                    echo "<td>" . $row['image'] . "</td>";
+                    echo "<td>" . "<img src='img/lines/" . $row['image']. "' class='img-thumbnail' alt='...'></td>";
                     echo "</tr>";
                 }
                 echo "</table>";

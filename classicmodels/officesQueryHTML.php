@@ -14,9 +14,10 @@
             <!-- 邊欄右BEGIN -->
             <div class="col py-3">
                 <h1>分公司文字總覽</h1><hr>
+                <p>固定回應5號，接下來練習依接收幾號來查詢。</p>
                 <?php include "connectDB.php"; ?><!-- 連線DB-->
                 <?php
-                $sql = "select * from offices where officeCode='5'";     /* 編輯SQL指令  */
+                $sql = "select * from offices where officeCode='5'";            /* 編輯SQL指令---先練習固定回應5號  */
                 $result = $conn->query($sql);       /* 執行SQL指令  */
                 if ($result->num_rows > 0){         /* 筆數大於0    */
                     $row = $result->fetch_assoc();  /* 讀取下一筆   */

@@ -1,55 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <?php include "htmlhead.php"; ?>
+  <meta charset="utf-8">
+  <title>Basic Line Chart - Apache ECharts Demo</title>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+}
+#chart-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+  </style>
 </head>
-
 <body>
-    <div class="container-fluid">
-        <div class="row flex-nowrap">
+  <?php 
 
-            <!-- 邊欄左BEGIN -->
-            <?php include "sidebarLEFT.php"; ?>
-            <!-- 邊欄左ENG -->
-            <!-- 邊欄右BEGIN -->
-            <div class="col py-3">
-                <h1>建立VIEW</h1>
-                <hr>
-                <div>
-                    <p>這是我想出來的方法，應該也有人想過吧。</p>
-                    <p>若$sql無法下複雜指令，可以先建一個VIEW再做處理。</p>
-                    <p>先刪VIEW、建立VIEW、進一步SELECT、顯示資料、刪VIEW。</p>
-                </div>
+$Ydata[]=150;
+$Ydata[]=230;
+$Ydata[]=224;
+$Ydata[]=218;
+$Ydata[]=135;
+$Ydata[]=289;
+$Ydata[]=260;
+$Xdata[]="MON";
+$Xdata[]="TUE";
+$Xdata[]="WED";
+$Xdata[]="THU";
+$Xdata[]="FRI";
+$Xdata[]="SAT";
+?>
 
-                <?php include "connectDB.php";  ?>
-                <!-- 因為$sql無法下複雜指令，可以先建一個VIEW再做處理-->
-                <!-- 先刪VIEW、建立VIEW、進一步SELECT、顯示資料、刪VIEW -->
-                <?php
-                $sql = "drop view if exists hotProduct;";
-                $result = $conn->query($sql);
-                echo $result . "Drop view if exists hotProduct</br>"; /* 執行正確傳回1 */
-
-                $sql = "create view hotProduct as select productCode, quantityOrdered, priceEach from orderdetails order by productCode;";
-                $result = $conn->query($sql);
-                echo $result . "create view hotProduct</br>";/* 執行正確傳回1 */
-
-                $sql = "select productCode, quantityOrdered*priceEach as subtotal from hotProduct;";
-                $result = $conn->query($sql);
-                $row = $result->fetch_assoc();
-                echo $result->num_rows . "</br>";
-                echo $row['productCode'] . "</br>";
-                //echo $row['quantityOrdered'] . "</br>";
-                //echo $row['priceEach'] . "</br>";
-                echo $row['subtotal'] . "</br>";
-                $sql = "drop view hotProduct;";
-                $result = $conn->query($sql);
-                echo $result . "Drop view hotProduct</br>";
-                ?>
-                <?php include "disconnectDB.php";  ?>
-            </div><!-- 邊欄右END -->
-        </div><!-- row結束-->
-    </div><!-- container結束-->
+<div id="chart-container"></div>
+  <script src="https://fastly.jsdelivr.net/npm/echarts@5.4.2/dist/echarts.min.js"></script>
 </body>
-
 </html>
+
+<script>
+var dom = document.getElementById('chart-container');
+var myChart = echarts.init(dom, null, {
+  renderer: 'canvas',
+  useDirtyRect: false
+});
+var app = {};
+
+var option;
+
+option = {
+  xAxis: {
+    type: 'category',
+    data: <?php echo json_encode($Xdata); ?>
+  },
+  yAxis: {
+    type: 'value'
+  },
+  series: [
+    {
+      data: <?php echo json_encode($Ydata); ?>,
+      type: 'line'
+    }
+  ]
+};
+
+if (option && typeof option === 'object') {
+  myChart.setOption(option);
+}
+
+window.addEventListener('resize', myChart.resize);
+</script>
