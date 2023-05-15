@@ -1,4 +1,4 @@
-<div class="row">
+
     <div class="card m-3 p-3 shadow round-3" style="width: 18rem; background-image: linear-gradient(#ffffff, #ffffff, #ff88ff)">
         <div class="card-body">
             <h5 class="card-title"><i class="fs-2 bi-box-seam px-3 text-info"></i></i>產品</h5>
@@ -98,4 +98,3 @@
             <a href="#" class="btn btn-primary">更多...</a>
         </div>
     </div>
-</div>

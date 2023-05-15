@@ -1,4 +1,3 @@
-<div class="row">
     <div class="card m-3 p-3 shadow round-3" style="width: 18rem; background-image: linear-gradient(#ffffff, #ffffff, #88ffff)">
         <div class="card-body">
             <h5 class="card-title"><i class="fs-2 bi-people px-3 text-info"></i>顧客</h5>
@@ -83,4 +82,3 @@
             <a href="employeesAll.php" class="btn btn-primary" data-bs-title="This top tooltip is themed via CSS variables.">更多...</a>
         </div>
     </div>
-</div>

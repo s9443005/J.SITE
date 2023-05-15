@@ -29,11 +29,15 @@
                 <h1>儀表板</h1>
                 <hr>
                 <div class="row">
+                  <div class="row">
                     <?php include "indexCardBlue.php"; ?>
                     <?php include "indexCardYellow.php"; ?>
                     <?php include "indexCardMagenta.php"; ?>
                     <?php include "indexCardGold.php"; ?>
-                    <?php include "indexCardCharts.php"; ?>
+                  </div>
+                  <div class="row">
+                    <?php include "indexCharts.php"; ?>
+                  <div>
                 </div>
                 <?php include "disconnectDB.php"; ?>
             </div>
