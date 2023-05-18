@@ -124,8 +124,12 @@
                     <li class="w-100">
                         <a href="officesQueryShowAccordionB.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">分公司查詢-手風琴</span>3</a>
                     </li>
+                    </li>
                     <li class="w-100">
                         <a href="officesQueryBySelect.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">分公司下拉查詢</span>3</a>
+                    </li>
+                    <li class="w-100">
+                        <a href="officesModifyA.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">分公司資料修改</span>3</a>
                     </li>
                 </ul>
             </li><!--分公司選單-教學範例都在這裡-->
