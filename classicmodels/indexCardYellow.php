@@ -29,7 +29,7 @@
     <!--產品線內產品數BEGIN-->
     <div class="card m-3 p-3 shadow round-3" style="width: 18rem; background-image: linear-gradient(#ffffff, #ffffff, #ffff00)">
         <div class="card-body">
-            <h5 class="card-title"><i class="fs-2 bi-calendar3 px-3 text-info"></i>訂單</h5>
+            <h5 class="card-title"><i class="fs-2 bi-boxes px-3 text-info"></i>產品線</h5>
             <?php
             $sql = "SELECT productLine, count(productCode) as countProducts FROM products group by productLine;";
             $result = $conn->query($sql);
@@ -46,7 +46,7 @@
     <!--分公司內員工BEGIN-->
     <div class="card m-3 p-3 shadow round-3" style="width: 18rem; background-image: linear-gradient(#ffffff, #ffffff, #ffff00)">
         <div class="card-body">
-            <h5 class="card-title"><i class="fs-2 bi-calendar3 px-3 text-info"></i>訂單</h5>
+            <h5 class="card-title"><i class="fs-2 bi-person-vcard px-3 text-info"></i>內部員工</h5>
             <?php
             $sql = "SELECT officeCode, count(employeeNumber) as countEmployees FROM employees group by officeCode;";
             $result = $conn->query($sql);

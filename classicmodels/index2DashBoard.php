@@ -26,13 +26,10 @@
             <?php include "connectDB.php"; ?>
             <!-- 邊欄右BEGIN -->
             <div class="col py-3">
-                <h1>總覽</h1>
+                <h1>儀表板</h1>
                 <hr>
                 <div class="row">
-                    <?php include "indexCardBlue.php"; ?>
-                    <?php include "indexCardYellow.php"; ?>
-                    <?php include "indexCardMagenta.php"; ?>
-                    <?php include "indexCardGold.php"; ?>
+                    <?php include "indexCharts.php"; ?>
                 </div>
                 <?php include "disconnectDB.php"; ?>
             </div>
