@@ -1,72 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <title>Basic Line Chart - Apache ECharts Demo</title>
-  <style>
-    * {
-  margin: 0;
-  padding: 0;
-}
-#chart-container {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-  </style>
+    <?php include "htmlhead.php"; ?>
 </head>
+
 <body>
-  <?php 
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
 
-$Ydata[]=150;
-$Ydata[]=230;
-$Ydata[]=224;
-$Ydata[]=218;
-$Ydata[]=135;
-$Ydata[]=289;
-$Ydata[]=260;
-$Xdata[]="MON";
-$Xdata[]="TUE";
-$Xdata[]="WED";
-$Xdata[]="THU";
-$Xdata[]="FRI";
-$Xdata[]="SAT";
-?>
+            <!-- 邊欄左BEGIN -->
+            <?php include "sidebarLEFT.php"; ?>
+            <!-- 邊欄左ENG -->
 
-<div id="chart-container"></div>
-  <script src="https://fastly.jsdelivr.net/npm/echarts@5.4.2/dist/echarts.min.js"></script>
+            <!-- 邊欄右BEGIN -->
+            <div class="col py-3">
+                <h1>分公司記錄修改</h1>
+                <hr>
+                <?php include "connectDB.php"; ?>
+                <?php
+                $sql = "SELECT * FROM offices;";
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                    }
+                } else {
+                    echo "0 results";
+                }
+                ?>
+
+                <div class="col-lg-8 col-xl-6"><!--右邊欄BEGIN-->
+                    <div class="card rounded-3">
+                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img3.webp"
+                            class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
+                            alt="Sample photo">
+                        <div class="card-body p-4 p-md-5">
+                            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Registration Info</h3>
+                            <form class="px-md-2"><!--表單BEGIN-->
+                                <div class="form-outline mb-4">
+                                    <input type="text" id="form3Example1q" class="form-control" />
+                                    <label class="form-label" for="form3Example1q">Name</label>
+                                </div>
+                                <div class="row"><!--ROW開始-->
+                                    <div class="col-md-6 mb-4">
+                                        <div class="form-outline datepicker">
+                                            <input type="text" class="form-control" id="exampleDatepicker1" />
+                                            <label for="exampleDatepicker1" class="form-label">Select a date</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <select class="select">
+                                            <option value="1" disabled>Gender</option>
+                                            <option value="2">Female</option>
+                                            <option value="3">Male</option>
+                                            <option value="4">Other</option>
+                                        </select>
+                                    </div>
+                                </div><!--ROW結束-->
+                                <div class="mb-4">
+                                    <select class="select">
+                                        <option value="1" disabled>Class</option>
+                                        <option value="2">Class 1</option>
+                                        <option value="3">Class 2</option>
+                                        <option value="4">Class 3</option>
+                                    </select>
+                                </div>
+                                <div class="row mb-4 pb-2 pb-md-0 mb-md-5">
+                                    <div class="col-md-6">
+                                        <div class="form-outline">
+                                            <input type="text" id="form3Example1w" class="form-control" />
+                                            <label class="form-label" for="form3Example1w">Registration code</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-success btn-lg mb-1">Submit</button>
+                            </form><!--表單END-->
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <?php include "disconnectDB.php"; ?>
+            </div>
+            <!-- 邊欄右END -->
+
+        </div>
+    </div>
 </body>
+
 </html>
-
-<script>
-var dom = document.getElementById('chart-container');
-var myChart = echarts.init(dom, null, {
-  renderer: 'canvas',
-  useDirtyRect: false
-});
-var app = {};
-
-var option;
-
-option = {
-  xAxis: {
-    type: 'category',
-    data: <?php echo json_encode($Xdata); ?>
-  },
-  yAxis: {
-    type: 'value'
-  },
-  series: [
-    {
-      data: <?php echo json_encode($Ydata); ?>,
-      type: 'line'
-    }
-  ]
-};
-
-if (option && typeof option === 'object') {
-  myChart.setOption(option);
-}
-
-window.addEventListener('resize', myChart.resize);
-</script>
