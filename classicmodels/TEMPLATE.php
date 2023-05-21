@@ -16,9 +16,17 @@
             <!-- 邊欄右BEGIN -->
             <div class="col py-3">
                 <h1>標題文字</h1><hr>
+                <?php include "connectDB.php"; ?>
 
-
-
+                <?php
+                    $sql ="";
+                    $result = $conn->query($sql);
+                    if ($result->num_rows > 0){
+                        while($row = $result->fetch_assoc()) {
+                        }
+                    }            
+                ?>
+                <?php include "disconnectDB.php"; ?>
             </div><!-- 邊欄右END -->
         </div><!-- row結束-->
     </div><!-- container結束-->

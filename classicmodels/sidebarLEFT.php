@@ -129,7 +129,7 @@
                         <a href="officesQueryBySelect.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">分公司下拉查詢</span>3</a>
                     </li>
                     <li class="w-100">
-                        <a href="officesModifyA.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">分公司資料修改</span>3</a>
+                        <a href="officesInsertAForm.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">分公司資料新增</span>3</a>
                     </li>
                 </ul>
             </li><!--分公司選單-教學範例都在這裡-->
@@ -163,13 +163,13 @@
                         <a href="officesAllaccordionTeach.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">分公司手風琴前教學</span>1</a>
                     </li>
                     <li class="w-100">
-                        <a href="formPassingParameters.html" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">表單POST/GET到PHP教學</span>1</a>
+                        <a href="noteFormPassingParameters.html" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">表單POST/GET到PHP教學</span>1</a>
                     </li>
                     <li class="w-100">
                         <a href="viewForComplexSQL.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">用VIEW解複雜SQL</span></a>
                     </li>
                     <li class="w-100">
-                        <a href="ordersDateAdd18YearNote.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">將Order日期加18年</span></a>
+                        <a href="noteDateAdd18Years.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">將Order日期加18年</span></a>
                     </li>
                     <li class="w-100">
                         <a href="chartByCanvasJS.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">用CanvasJS畫統計圖</span></a>
@@ -177,6 +177,9 @@
                     <li class="w-100">
                         <a href="chartByCDNJS.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">用CDNJS畫統計圖</span></a>
                     </li>
+                    <li class="w-100">
+                        <a href="noteCharacterDisplay.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">中文字顯示筆記</span>3</a>
+                    </li>                    
                 </ul>
             </li><!--教學雜七雜八筆記-->
 

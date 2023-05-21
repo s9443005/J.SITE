@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/3914790684.js" crossorigin="anonymous"></script>
+    <title>J站後臺管理系統</title>
+</head>
+
+<body>
+    <h1>表單POST/GET到PHP教學</h1><hr>
+    <form method="post" action="noteFormReceiveParameters.php" class="m-5">
+        <label>輸入員工編號</label>
+        <input type="text" name="name" placeholder="不使用">
+        <input type="submit" value="Submit" />
+    </form>
+    <form method="post" action="noteFormReceiveParameters.php" class="m-5">
+        <label>選擇員工編號</label>
+        <select name="employeeNumber">
+            <option value="1702">1702</option>
+            <option value="1611">1611</option>
+            <option value="1504">1504</option>
+            <option value="1337">1337</option>
+        </select>
+        <input type="submit" value="Submit" />
+    </form>
+    <div class="m-5">這個範例在教導在HTML傳值給PHP。<br>
+        傳值的方式有POST及GET二種，學生要學一下。<br>
+        除了本支HTML，接收參數的PHP也是重點。<br>
+        如何以GET完成參數傳遞？<br>
+        如何以POST完成參數傳遞？<br>
+        如何以GET完成參數傳遞？<br>
+        搭配程式<br>
+        formPassingParameters.html<br>
+        formReceiveParameters.php<br>
+        接下來是，如何把2支程式寫成1支！
+    </div>
+</body>
+
+</html>

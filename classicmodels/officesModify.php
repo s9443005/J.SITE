@@ -26,7 +26,7 @@
                 echo "<form>";
                 echo "</form>";
             } else{
-                echo "發生錯誤，無記錄顯示！"
+                echo "發生錯誤，無記錄顯示！";
             }
             ?>
 
