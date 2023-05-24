@@ -25,6 +25,54 @@
                 </a>
             </li><!--儀表板選單-->
 
+            <!--分公司選單-教學範例都在這裡-->
+            <li>
+                <a href="#submenu6" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                    <i class="fs-2 bi-house-door-fill"></i> <span class="ms-1 d-none d-sm-inline">分公司佈局</span> </a>
+                <ul class="collapse nav flex-column ms-1" id="submenu6" data-bs-parent="#menu">
+                    <li class="w-100">
+                        <a href="officesTextAll.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">分公司文字總覽</span>1</a>
+                    </li>
+                    <li class="w-100">
+                        <a href="officesAll.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">分公司表格總覽</span>2</a>
+                    </li>
+                    <li class="w-100">
+                        <a href="officesAllaccordionA.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">分公司手風琴總覽A</span>2</a>
+                    </li>
+                    <li class="w-100">
+                        <a href="officesAllaccordionB.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">分公司手風琴總覽B</span>3</a>
+                    </li>
+                    <li class="w-100">
+                        <a href="officesAllaccordionC.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">分公司手風琴總覽C</span>4</a>
+                    </li>
+                    <li class="w-100">
+                        <a href="officesAllaccordionD.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">分公司手風琴總覽D</span>5</a>
+                    </li>
+                    <li class="w-100">
+                        <a href="officesQueryHTMLA.html" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">分公司HTML+PHP查詢A</span>1</a>
+                    </li>
+                    <li class="w-100">
+                        <a href="officesQueryShowTextB.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">分公司PHP查詢B</span>2</a>
+                    </li>
+                    <li class="w-100">
+                        <a href="officesQueryShowAccordionC.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">分公司查詢-手風琴C</span>3</a>
+                    </li>
+                    </li>
+                    <li class="w-100">
+                        <a href="officesQueryBySelectA.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">分公司下拉查詢D</span>4</a>
+                    </li>
+                    <li class="w-100">
+                        <a href="officesInsertAForm.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">分公司HTML+PHP新增A</span>1</a>
+                    </li>
+                    <li class="w-100">
+                        <a href="officesInsertB.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">分公司PHP新增B</span>2</a>
+                    </li> 
+                    <li class="w-100">
+                        <a href="officesAll4DeleteA.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">分公司資料刪除A</span>1</a>
+                    </li>                    
+                </ul>
+            </li><!--分公司選單-教學範例都在這裡-->
+
             <!--顧客選單-->
             <li>
                 <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
@@ -92,47 +140,7 @@
                 </ul>
             </li><!--支付選單-->
 
-            <!--分公司選單-教學範例都在這裡-->
-            <li>
-                <a href="#submenu6" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                    <i class="fs-2 bi-house-door-fill"></i> <span class="ms-1 d-none d-sm-inline">分公司佈局</span> </a>
-                <ul class="collapse nav flex-column ms-1" id="submenu6" data-bs-parent="#menu">
-                    <li class="w-100">
-                        <a href="officesTextAll.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">分公司文字總覽</span>1</a>
-                    </li>
-                    <li class="w-100">
-                        <a href="officesAll.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">分公司表格總覽</span>2</a>
-                    </li>
-                    <li class="w-100">
-                        <a href="officesAllaccordionA.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">分公司手風琴總覽A</span>2</a>
-                    </li>
-                    <li class="w-100">
-                        <a href="officesAllaccordionB.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">分公司手風琴總覽B</span>3</a>
-                    </li>
-                    <li class="w-100">
-                        <a href="officesAllaccordionC.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">分公司手風琴總覽C</span>4</a>
-                    </li>
-                    <li class="w-100">
-                        <a href="officesAllaccordionD.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">分公司手風琴總覽D</span>5</a>
-                    </li>
-                    <li class="w-100">
-                        <a href="officesQueryHTML.html" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">分公司HTML查詢</span>1</a>
-                    </li>
-                    <li class="w-100">
-                        <a href="officesQueryShowTextA.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">分公司查詢-文字</span>2</a>
-                    </li>
-                    <li class="w-100">
-                        <a href="officesQueryShowAccordionB.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">分公司查詢-手風琴</span>3</a>
-                    </li>
-                    </li>
-                    <li class="w-100">
-                        <a href="officesQueryBySelect.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">分公司下拉查詢</span>3</a>
-                    </li>
-                    <li class="w-100">
-                        <a href="officesInsertAForm.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">分公司資料新增</span>3</a>
-                    </li>
-                </ul>
-            </li><!--分公司選單-教學範例都在這裡-->
+
 
             <!--員工選單-->
             <li>

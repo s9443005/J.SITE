@@ -19,8 +19,8 @@
                 <?php include "connectDB.php"; ?>
                 <!--重點：接收$_POST['參數']，寫成INSERT INTO指令-->
                 <?php
-                    $sql  = "DELETE FROM offices WHERE officeCode='8';";
-                    $result = $conn->query($sql);
+                    //$sql  = "DELETE FROM offices WHERE officeCode='10';";
+                    //$result = $conn->query($sql);
 
                     $officeCode = $city = $phone = $addressLine1 = $addressLine2 = $state = $country = $country = $postalCode = $territory = "";
 
@@ -35,7 +35,8 @@
                     $territory  =   $_POST["territory"];
 
                     $sql  = "INSERT INTO offices (officeCode, city, phone, addressLine1, addressLine2, state, country, postalCode, territory) ";
-                    $sql .= "VALUES ('".$officeCode."', '"."$city"."', '".$phone."', '". $addressLine1."', '', '', '中華民國', '10011', '亞太');";
+                    $sql .= "VALUES ('" . $officeCode . "', '". $city . "', '". $phone . "', '". $addressLine1 . "', '". $addressLine2 . "', '";
+                    $sql .= $state . "', '". $country . "', '". $postalCode . "', '". $territory . "');";
                     //echo $sql;
                     if (!($result = $conn->query($sql))) {
                         echo $conn->error;
@@ -47,6 +48,7 @@
                     echo "<p>" . $row["officeCode"] . $row["city"] . $row["phone"] . $row["addressLine1"] . $row["country"] . $row["postalCode"] . $row["territory"] . "</p>";
 
                 ?>
+                <div><a href="officesInsertAForm.php" class="btn btn-primary m-3">回上頁</a></div>
                 <?php include "disconnectDB.php"; ?>
             </div><!-- 邊欄右END -->
         </div><!-- row結束-->
