@@ -29,14 +29,14 @@
                         }
                         ?>
                         </select>
-                        <button type="submit" class="btn btn-primary text-white">提交查詢</button>
+                        <button type="submit" class="btn btn-primary text-white">提交2查詢</button>
                     </div>
                     </form>
                 <hr>
                 <?php
                 if (!($_SERVER["REQUEST_METHOD"] == "POST")) { die("沒有POST"); }
                 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                    $officeCode = $_POST['officeCode'];
+                    echo $_POST['officeCode'];
                     //echo $officeCode;
                 }
                 ?><!--處理接收參數POST或GET-->

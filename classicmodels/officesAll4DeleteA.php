@@ -46,7 +46,10 @@
                     echo "<td>" . $row['country'] . "</td>";
                     echo "<td>" . $row['postalCode'] . "</td>";
                     echo "<td>" . $row['territory'] . "</td>";
-                    echo "<td><form action='#'><button type='submit' class='btn btn-danger'>刪除</button></form></td>";
+                    echo "<td>  <form action='officesDeleteMe.php' method='post'>
+                                    <input type='hidden' name='officeCode' value='".$row['officeCode']."'>
+                                    <button type='submit' class='btn btn-danger'>刪除</button>
+                                </form></td>";
                     echo "</tr>";
                 }
                 echo "</table>";
