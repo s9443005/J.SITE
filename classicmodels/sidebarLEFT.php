@@ -110,6 +110,52 @@
                 </ul>
         </li><!--分公司選單-教學範例都在這裡END-->
 
+        <!--員工選單-->
+        <li>
+            <a href="#submenu7" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                <i class="fs-2 bi-person-vcard"></i> <span class="ms-1 d-none d-sm-inline">內部員工</span> </a>
+            <ul class="collapse nav flex-column ms-1" id="submenu7" data-bs-parent="#menu">
+                <li class="w-100">
+                    <a href="employeesTextAll.php" class="nav-link px-0 text-white"> <span
+                            class="d-none d-sm-inline">文字總覽</span><span class="text-danger">TT</span></span></a>
+                </li>
+                <li class="w-100">
+                    <a href="employeesAll.php" class="nav-link px-0 text-white"> <span
+                            class="d-none d-sm-inline">表格總覽</span><span class="text-info">TB</span></span></a>
+                </li>
+                <li class="w-100">
+                    <a href="employeesAllaccordionA.php" class="nav-link px-0 text-white"> <span
+                            class="d-none d-sm-inline">手風琴總覽1</span><span class="text-secondary">ANTT</span></a>
+                </li>
+                <li class="w-100">
+                    <a href="employeesAllaccordionB.php" class="nav-link px-0 text-white"> <span
+                            class="d-none d-sm-inline">手風琴總覽2</span><span class="text-success">ANTB</span></a>
+                </li>                
+                <li class="w-100">
+                        <a href="employeesAllaccordionC.php" class="nav-link px-0 text-white"> <span
+                                class="d-none d-sm-inline">手風琴總覽3</span><span class="text-danger">ANMT</span></a>
+                </li>                
+                <li class="w-100">
+                    <a href="employeesAllCard.php" class="nav-link px-0 text-white"> <span
+                            class="d-none d-sm-inline">卡片總覽4</span><span class="text-info">CARD</span></a>
+                </li>
+                <li class="w-100">
+                    <a href="employeesTitleView.php" class="nav-link px-0 text-white"> <span
+                            class="d-none d-sm-inline">職稱手風琴總覽</span> 1</a>
+                </li>
+                <hr>
+                <li class="w-100">
+                    <a href="employeeQueryBySelectA.php" class="nav-link px-0 text-white"> <span
+                            class="d-none d-sm-inline">查詢4下拉</span><span class="text-info">QYDD</span></a>
+                </li>                
+                <li class="w-100">
+                    <a href="employeeQueryBySelectB.php" class="nav-link px-0 text-white"> <span
+                            class="d-none d-sm-inline">查詢5詳細</span><span class="text-warning">QYDE</span></a>
+                </li>
+            </ul>
+        </li><!--員工選單-->
+
+
         <!--顧客選單-->
         <li>
             <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
@@ -217,21 +263,7 @@
 
 
 
-        <!--員工選單-->
-        <li>
-            <a href="#submenu7" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                <i class="fs-2 bi-person-vcard"></i> <span class="ms-1 d-none d-sm-inline">內部員工</span> </a>
-            <ul class="collapse nav flex-column ms-1" id="submenu7" data-bs-parent="#menu">
-                <li class="w-100">
-                    <a href="employeesAll.php" class="nav-link px-0 text-white"> <span
-                            class="d-none d-sm-inline">員工表格總覽</span> 1</a>
-                </li>
-                <li class="w-100">
-                    <a href="employeesTitleView.php" class="nav-link px-0 text-white"> <span
-                            class="d-none d-sm-inline">職稱手風琴總覽</span> 1</a>
-                </li>
-            </ul>
-        </li><!--員工選單-->
+
 
         <!--教學雜七雜八筆記-->
         <li>
@@ -263,6 +295,10 @@
                             class="d-none d-sm-inline">將Order日期加18年</span></a>
                 </li>
                 <li class="w-100">
+                    <a href="noteAddingPhoto4Employees.php" class="nav-link px-0 text-white"> <span
+                            class="d-none d-sm-inline">為員工增加相片</span></a>
+                </li>
+                <li class="w-100">
                     <a href="chartByCanvasJS.php" class="nav-link px-0 text-white"> <span
                             class="d-none d-sm-inline">用CanvasJS畫統計圖</span></a>
                 </li>
@@ -282,6 +318,9 @@
                 </li>
                 <li class="w-100">
                     <a href="notepadWebPageTemplate.html" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">網頁樣版</span>3</a>
+                </li>
+                <li class="w-100">
+                    <a href="noteUsefulLinks.php" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline">參考鏈結</span>3</a>
                 </li>
             </ul>
         </li><!--教學雜七雜八筆記-->

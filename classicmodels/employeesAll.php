@@ -18,6 +18,7 @@
             <h1>員工表格總覽</h1><hr>
             <?php include "connectDB.php"; ?>
             <?php
+            //$sql = "SELECT * FROM employees, offices WHERE employees.officeCode=offices.officeCode;";
             $sql = "SELECT * FROM employees;";
             $result = $conn->query($sql);
 
@@ -40,7 +41,7 @@
                     echo "<td>" . $row['firstName'] . "</td>";
                     echo "<td>" . $row['extension'] . "</td>";
                     echo "<td>" . $row['email'] . "</td>";
-                    echo "<td>" . $row['officeCode'] . "</td>";
+                    echo "<td>" . $row['officeCode'] . "</td>";  //可以加入分公司城市
                     echo "<td>" . $row['reportsTo'] . "</td>";
                     echo "<td>" . $row['jobTitle'] . "</td>";
                     echo "</tr>";

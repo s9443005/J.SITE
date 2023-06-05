@@ -6,12 +6,6 @@
 </head>
 
 <body>
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Library</li>
-  </ol>
-</nav>
     <div class="container-fluid">
         <div class="row flex-nowrap">
 
@@ -155,7 +149,17 @@
                                         echo "<td>".$row['firstName']." ".$row['lastName']."</td>";
                                         echo "<td>".$row['extension']."</td>";
                                         echo "<td>".$row['email']."</td>";
-                                        echo "<td>".$row['city']." ".$row['country']."</td>";
+                                        // echo "<td>".$row['city']." ".$row['country']."</td>";
+                                            //彩蛋BEGIN
+                                                //這裡有彩蛋，CLICK分公司CITY可以LINK to分公司下拉式查詢程式
+                                                echo "<td><form action='officesQueryBySelectA.php' method='POST'>";
+                                                echo "<input type='hidden' value='".$row['officeCode']."'>";
+                                                echo "<button type='submit' class='btn position-relative' name=officeCode value=".$row['officeCode'].">";
+                                                echo "<span class='badge bg-danger rounded-pill'>彩蛋</span>".$row['city']." ".$row['country']."</button>";
+
+                                                echo "";
+                                                echo "</form></td>";
+                                            //彩蛋END 
                                         echo "<td>".$row['reportsTo']."</td>";
                                     }
                                     echo "</tr>";

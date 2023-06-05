@@ -26,7 +26,7 @@
                 $i = 0;
                 while($row = $result->fetch_assoc()) {
                     $i = $i + 1;
-                    echo "<div class='accordion-item m-1'><!-- 手風琴項目BEGIN -->";
+                    echo "<div class='accordion-item m-1'>";
                     echo "<h2 class='accordion-header' id='heading" .$i. "'>";
                     echo "<button class='accordion-button collapsed' type='button' data-bs-toggle='collapse' data-bs-target='#collapse" . $i . "'  aria-expanded='true' aria-controls='collapse" . $i . "'>";
                     echo "第" . $row['officeCode'] . "號分公司<div class='ms-5'>" . $row['city'] ."</div>";
@@ -98,7 +98,7 @@
                         /* 以上新增1個connection來存取本分公司員工姓名*/
                         echo "</div>";
                         echo "</div>";
-                    echo "</div><!-- 手風琴項目END -->";
+                    echo "</div>";
                 }
             }
             ?>

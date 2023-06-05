@@ -13,7 +13,7 @@
             <?php include "sidebarLEFT.php"; ?><!-- 邊欄左ENG -->
             <!-- 邊欄右BEGIN -->
             <div class="col py-3">
-                <h1>分公司編號查詢</h1>
+                <h1>產品編號查詢</h1>
                 <form method="post" action="productsQueryShowTextA.php" class='m-5'>
                     <label>輸入產品編號</label>
                     <input type="text" name="productCode" placeholder="請輸入編號產品編號">

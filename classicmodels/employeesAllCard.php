@@ -26,16 +26,17 @@
                         while($row = $result->fetch_assoc()) {
                 ?>
                     <!--每張卡片BEGIN-->
-                        <div class="card m-3" style="width: 15rem; background-image: linear-gradient(#ffffff, #ffffff, #88ffff)">
+                        <div class="card m-3" style="width: 15rem; padding-bottom:15px; ; background-image: linear-gradient(#ffffff, #ffffff, #88ffff)">
                             <img src="<?php echo $row['employeePhoto']; ?>" class="card-img-top img-thumbnail" alt="<?php echo $row['firstName']; ?>">
-                            <div class="card-body">
+                            <div class="card-body" style="padding-bottom:0rem">
                                 <h5 class="card-title"><?php echo $row['jobTitle']; ?></h5>
                                 <p class="card-text">
                                     <div><span class="me-3">姓名</span><?php echo $row['firstName'] . " " .$row['lastName']; ?></div>
                                     <div><span class="me-3">地點</span><?php echo $row['city']; ?></div>
                                 </p>
-                                <a href="#" class="btn btn-primary" >更多...</a>
+                                <!-- <a href="#" class="btn btn-primary" >更多...</a> -->
                             </div>
+                                 <a href="#" class="btn btn-primary" >前往個人檔案</a>
                         </div>                
                     <!--每張卡片END-->
                 <?php
