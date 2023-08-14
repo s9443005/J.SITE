@@ -155,36 +155,48 @@
             </ul>
         </li><!--員工選單-->
 
-
-        <!--顧客選單-->
+        <!--產品線選單-->
         <li>
-            <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                <i class="fs-2 bi-people"></i> <span class="ms-1 d-none d-sm-inline">顧客關係</span> </a>
-            <ul class="collapse nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+            <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
+                <i class="fs-2 bi-boxes"></i> <span class="ms-1 d-none d-sm-inline">產品線策略</span></a>
+            <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
                 <li class="w-100">
-                    <a href="customersAll.php" class="nav-link px-0 text-white"> <span
-                            class="d-none d-sm-inline">顧客表格總覽</span><span class="text-danger">AL</span></a>
+                    <a href="productLinesTextAll.php" class="nav-link px-0 text-white"><span
+                            class="d-none d-sm-inline">文字總覽</span><span class="text-danger">TT</span></a>
+                </li>
+                <li class="w-100">
+                    <a href="productLinesAll.php" class="nav-link px-0 text-white"> <span
+                            class="d-none d-sm-inline">表格總覽</span><span class="text-info">TB</span></a>
+                </li>
+                <li class="w-100">
+                    <a href="productLinesAllaccordionA.php" class="nav-link px-0 text-white"> <span
+                            class="d-none d-sm-inline">手風琴總覽1</span><span class="text-secondary">ANTT</span></a>
                 </li>
             </ul>
-        </li><!--顧客-->
+        </li><!--產品線-->
 
         <!--產品選單-->
         <li>
             <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
                 <i class="fs-2 bi-box-seam"></i> <span class="ms-1 d-none d-sm-inline">產品管理</span></a>
             <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
+
                 <li class="w-100">
-                    <a href="productsAll.php" class="nav-link px-0  text-white"> <span
-                            class="d-none d-sm-inline">表格總覽</span>TB</a>
+                    <a href="productsTextAll.php" class="nav-link px-0 text-white"><span
+                            class="d-none d-sm-inline">文字總覽</span><span class="text-danger">TT</span></a>
                 </li>
                 <li class="w-100">
-                    <a href="productsAccordionA.php" class="nav-link px-0  text-white"> <span
-                            class="d-none d-sm-inline">手風琴總覽1</span>ANTT</a>
+                    <a href="productsAll.php" class="nav-link px-0 text-white"> <span
+                            class="d-none d-sm-inline">表格總覽</span><span class="text-info">TB</span></a>
                 </li>
                 <li class="w-100">
-                    <a href="productsAccordionB.php" class="nav-link px-0  text-white"> <span
-                            class="d-none d-sm-inline">手風琴總覽2</span>ANTB</a>
-                </li>                
+                    <a href="productsAllaccordionA.php" class="nav-link px-0 text-white"> <span
+                            class="d-none d-sm-inline">手風琴總覽1</span><span class="text-secondary">ANTT</span></a>
+                </li>
+                <li class="w-100">
+                    <a href="productsAllaccordionB.php" class="nav-link px-0 text-white"> <span
+                            class="d-none d-sm-inline">手風琴總覽2</span><span class="text-success">ANTB</span></a>
+                </li>
                 <li class="w-100">
                     <a href="productsAccordionC.php" class="nav-link px-0  text-white"> <span
                             class="d-none d-sm-inline">手風琴總覽4</span>ANTG1</a>
@@ -209,21 +221,30 @@
             </ul>
         </li><!--產品-->
 
-        <!--產品線選單-->
+
+        <!--顧客選單-->
         <li>
-            <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
-                <i class="fs-2 bi-boxes"></i> <span class="ms-1 d-none d-sm-inline">產品線策略</span></a>
-            <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+            <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                <i class="fs-2 bi-people"></i> <span class="ms-1 d-none d-sm-inline">顧客關係</span> </a>
+            <ul class="collapse nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
                 <li class="w-100">
-                    <a href="productLinesAll.php" class=" text-white"> <span class="d-none d-sm-inline">產品線表格總覽</span>
-                        1</a>
+                    <a href="customersTextAll.php" class="nav-link px-0 text-white"><span
+                            class="d-none d-sm-inline">文字總覽</span><span class="text-danger">TT</span></a>
                 </li>
-                <li>
-                    <a href="productlinesAllaccordion.php" class="nav-link px-0 text-white"> <span
-                            class="d-none d-sm-inline">產品線手風琴總覽</span> 2</a>
+                <li class="w-100">
+                    <a href="customersAll.php" class="nav-link px-0 text-white"> <span
+                            class="d-none d-sm-inline">表格總覽</span><span class="text-info">TB</span></a>
+                </li>
+                <li class="w-100">
+                    <a href="customersAllaccordionA.php" class="nav-link px-0 text-white"> <span
+                            class="d-none d-sm-inline">手風琴總覽1</span><span class="text-secondary">ANTT</span></a>
+                </li>
+                <li class="w-100">
+                    <a href="customersAllaccordionB.php" class="nav-link px-0 text-white"> <span
+                            class="d-none d-sm-inline">手風琴總覽2</span><span class="text-success">ANTB</span></a>
                 </li>
             </ul>
-        </li><!--產品線-->
+        </li><!--顧客-->        
 
         <!--訂單選單-->
         <li>
@@ -273,6 +294,10 @@
                 <li class="w-100">
                     <a href="classicmodelsERD.php" class="nav-link px-0 text-white"> <span
                             class="d-none d-sm-inline">經典資料庫ERD</span>1</a>
+                </li>
+                <li class="w-100">
+                    <a href="noteComplexSQL.php" class="nav-link px-0 text-white"> <span
+                            class="d-none d-sm-inline">進階SQL教學</span>1</a>
                 </li>
                 <li class="w-100">
                     <a href="customersAllTextTeach.php" class="nav-link px-0 text-white"> <span

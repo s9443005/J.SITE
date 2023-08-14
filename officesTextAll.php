@@ -36,7 +36,7 @@
                 }
 
                 ?>
-                <?php include "connectDB.php"; ?><!-- 斷線DB-->
+                <?php include "disconnectDB.php"; ?><!-- 斷線DB-->
             </div><!-- 邊欄右END -->
         </div><!-- row結束-->
     </div><!-- container結束-->
