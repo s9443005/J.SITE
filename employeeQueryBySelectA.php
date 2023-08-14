@@ -10,8 +10,8 @@
         <div class="row flex-nowrap">
 
             <!-- 邊欄左BEGIN -->
-            <?php include "sidebarLEFT.php"; ?><!-- 邊欄左ENG -->
-            
+            <?php include "sidebarLEFT.php"; ?>
+            <!-- 邊欄左ENG -->
             
             <!-- 邊欄右BEGIN -->
             <div class="col py-3">
@@ -42,15 +42,15 @@
                     //echo $employeeNumber;
                 }
                 ?><!--處理接收參數POST或GET-->
-                <div class="row"><!--右欄ROW開始-->
                 <?php
                     $sql  = "SELECT * FROM offices, employees WHERE offices.officeCode=employees.officeCode and employeeNumber='".$employeeNumber."';";
                     $result = $conn->query($sql);
                     if ($result->num_rows > 0){
+                        echo '<div class="row"><!--右欄ROW開始-->';
                         while($row = $result->fetch_assoc()) {
                 ?>
-                            <img class="col-sm-4 col-md-2 img-thumbnail" style="max-height: 100%; max-width=100%" src="<?php echo $row['employeePhoto']; ?>" alt="<?php echo $row['firstName']; ?>">
-                            <div class="col-sm-8 col-md-10">
+                            <img class="col-sm-4 col-md-3 img-thumbnail" style="height: 100%; width=100%" src="<?php echo $row['employeePhoto']; ?>" alt="<?php echo $row['firstName']; ?>">
+                            <div class="col-sm-8 col-md-">
                                             <div class="fs-4 text-primary"><?php echo $row['firstName']." ".$row['lastName']; ?></div>
                                             <div>編號：<?php echo $row['employeeNumber']; ?></div>
                                             <div>職稱：<?php echo $row['jobTitle']; ?></div>
@@ -62,12 +62,13 @@
                             </div>
                 <?php
                         }
-                    }            
-                ?><!--右欄ROW結束-->
+                        echo '</div><!--右欄ROW結束-->';
+
+                    }          
+                ?>
             </div><!-- 邊欄右END -->
             <?php include "disconnectDB.php"; ?>
-        </div><!-- row結束-->
+        </div><!--row結束-->
     </div><!-- container結束-->
 </body>
-
 </html>

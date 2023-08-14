@@ -1,0 +1,3 @@
+SELECT ProductLines.productLine, SUM(quantityOrdered*priceEach) AS salesByProductLine 
+FROM   orderdetails, Products, ProductLines 
+WHERE  orderDetails.productCode=Products.productCode and Products.productLine=productLines.productLine GROUP BY productlines.productline;
